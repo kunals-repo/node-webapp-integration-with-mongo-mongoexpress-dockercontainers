@@ -7,12 +7,6 @@
   <img src="https://img.shields.io/badge/MongoDB-Database-47A248?logo=mongodb&logoColor=white" />
 </p>
 
-<p align="center">
-  <b>Containerize. Connect. Manage.</b><br/>
-  A hands-on project demonstrating how a Node.js web application integrates with MongoDB and Mongo Express using Docker.
-</p>
-
----
 
 ## 📌 About the Project
 
