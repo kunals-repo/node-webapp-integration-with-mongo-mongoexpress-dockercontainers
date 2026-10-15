@@ -16,11 +16,10 @@
 
 ## 📌 About the Project
 
-Ever wondered how a web application communicates with a database while keeping its services separate?
 
 This project demonstrates how to run a **Node.js web application alongside MongoDB and Mongo Express**, using Docker containers to run the database services and Docker Compose to manage them together.
 
-The Node.js application serves a website and provides API endpoints for user data. MongoDB stores the data, while Mongo Express provides a browser-based interface for database administration.
+The Node.js application serves a website. MongoDB stores the data, while Mongo Express provides a browser-based interface for database administration.
 
 ### ✨ Key Highlights
 
@@ -93,22 +92,9 @@ node-webapp-integration-with-mongo-mongoexpress-dockercontainers/
 
 ## ⚙️ Getting Started
 
-### Prerequisites
-
-Make sure you have installed:
-
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) or Docker Engine with Docker Compose
-- [Node.js](https://nodejs.org/) and npm
-
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/kunals-repo/node-webapp-integration-with-mongo-mongoexpress-dockercontainers.git
-
-cd node-webapp-integration-with-mongo-mongoexpress-dockercontainers
 ```
 
-### 2️⃣ Start MongoDB and Mongo Express
+### Start MongoDB and Mongo Express
 
 Run the following command from the project directory:
 
@@ -128,15 +114,7 @@ View the container logs:
 docker compose -f mongocompose.yml logs -f
 ```
 
-### 3️⃣ Start the Node.js Application
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-Start the application:
+### Start the Node.js Application
 
 ```bash
 node server.js
@@ -152,45 +130,6 @@ The application should now be listening on port `5050`.
 | 🛠️ Mongo Express | [http://localhost:8081](http://localhost:8081) |
 | 🗄️ MongoDB | `localhost:27017` |
 
-Use the Mongo Express credentials configured in `mongocompose.yml` when prompted.
-
-## 🔌 API Endpoints
-
-The Node.js application includes the following routes:
-
-| HTTP Method | Endpoint | Description |
-|---|---|---|
-| `GET` | `/getUsers` | Retrieve user records from MongoDB |
-| `POST` | `/addUser` | Add a user record to MongoDB |
-
-These endpoints demonstrate how an application can interact with a database through API requests.
-
-## 🐳 Useful Docker Commands
-
-**Start services**
-```bash
-docker compose -f mongocompose.yml up -d
-```
-
-**List running services**
-```bash
-docker compose -f mongocompose.yml ps
-```
-
-**Follow service logs**
-```bash
-docker compose -f mongocompose.yml logs -f
-```
-
-**Stop and remove containers**
-```bash
-docker compose -f mongocompose.yml down
-```
-
-**Restart services**
-```bash
-docker compose -f mongocompose.yml restart
-```
 
 > **Data persistence:** If you configure a named Docker volume for MongoDB, the database files can persist after the container is removed. Confirm the volume configuration in your Compose file.
 
@@ -206,24 +145,7 @@ Through this project, I explored practical containerization and application inte
 - Using Mongo Express to inspect and manage database records.
 - Troubleshooting container startup and connectivity issues.
 
-## 🔐 Security Considerations
 
-This project is intended for learning and development.
-
-- Replace sample database and Mongo Express credentials before using the project in a shared environment.
-- Avoid committing passwords, connection strings containing secrets, or other sensitive configuration to GitHub.
-- Restrict database ports and administrative interfaces when deploying outside a local development environment.
-
-## 🚀 Future Improvements
-
-Potential enhancements for this project include:
-
-- [ ] Containerize the Node.js application.
-- [ ] Manage all three services through a single Docker Compose configuration.
-- [ ] Configure a persistent MongoDB volume.
-- [ ] Move credentials into an environment file and exclude it from Git.
-- [ ] Add health checks and service readiness conditions.
-- [ ] Implement a CI/CD pipeline for automated testing and deployment.
 
 ## 👨‍💻 Author
 
