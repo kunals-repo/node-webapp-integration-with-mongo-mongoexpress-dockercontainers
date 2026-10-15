@@ -86,7 +86,6 @@ node-webapp-integration-with-mongo-mongoexpress-dockercontainers/
 
 ## ⚙️ Getting Started
 
-```
 
 ### Start MongoDB and Mongo Express
 
